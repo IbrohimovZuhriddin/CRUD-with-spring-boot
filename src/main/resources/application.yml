@@ -1,0 +1,48 @@
+spring.application.name : Designation
+server:
+  port: 8080
+#spring:
+#  application:
+#    name: SpringBootCrudOperationApplication
+
+spring:
+  jpa:
+    database: postgresql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        #        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+        show-sql: true
+    open-in-view: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/IconToDoDB
+    username: IconToDo
+    password: nothing
+  sql:
+    init:
+      encoding: UTF-8
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ibrohimovzuhriddin310@gmail.com
+    password: gxzblhgjnaydmysn
+
+    properties:
+      mail:
+        smtp:
+#          ssl:
+#            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+          required: true
